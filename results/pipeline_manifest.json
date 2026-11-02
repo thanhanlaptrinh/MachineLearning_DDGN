@@ -1,0 +1,74 @@
+{
+  "versions": {
+    "scikit-learn": "1.9.1",
+    "xgboost": "3.4.1",
+    "pandas": "2.2.3",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "joblib": "1.5.3",
+    "Flask": "3.1.3",
+    "python": "3.12.14"
+  },
+  "rate": 25000.0,
+  "source_model_manifest_sha256": "6257b2685257fd29ccf12f3e90c5f2bf6c32cb1bba8aee2d96c2eed7bd36283f",
+  "selection_rule": "Minimum train-only 5-fold CV MAE in USD; tie broken by smaller fold standard deviation, then model ID. Raw/log chosen by same CV only.",
+  "winner": "boosting",
+  "steps": [
+    {
+      "name": "Dữ liệu",
+      "input": "data/train.csv, data/test.csv",
+      "output": "results/eda_report.json",
+      "summary": "1460 dòng có nhãn, 1459 dòng không nhãn",
+      "description": "Dữ liệu gốc được bảo toàn bằng SHA-256."
+    },
+    {
+      "name": "Khảo sát",
+      "input": "data/train.csv",
+      "output": "results/figures/, eda_report.json",
+      "summary": "79 đặc trưng; 36 số, 43 phân loại",
+      "description": "Khảo sát giá, giá trị thiếu, tương quan và ngoại lệ; không loại dòng."
+    },
+    {
+      "name": "Tiền xử lý",
+      "input": "notebooks_or_src_py/preprocess.py",
+      "output": "Pipeline trong models/final/",
+      "summary": "79 cột đầu vào, không có Id",
+      "description": "Điền trung vị cho số; nhãn Missing và mã hóa một nóng cho phân loại; fit trong mỗi fold."
+    },
+    {
+      "name": "Chia dữ liệu",
+      "input": "data/train.csv",
+      "output": "results/tuning_selection.json",
+      "summary": "1168 train / 292 holdout; seed 42",
+      "description": "Giữ nguyên cách chia 80/20 của nhóm."
+    },
+    {
+      "name": "Huấn luyện và tinh chỉnh",
+      "input": "tune_models.py, tập train",
+      "output": "results/tuning_report.json, tuning_cv_results/",
+      "summary": "5 mô hình; CV 5 phần",
+      "description": "Cây quyết định tìm lưới; ba mô hình tổ hợp tìm ngẫu nhiên raw/log. Hồi quy tuyến tính là đối chứng."
+    },
+    {
+      "name": "Chọn mô hình",
+      "input": "results/tuning_selection.json",
+      "output": "models/final/manifest.json",
+      "summary": "Mô hình thắng CV: boosting",
+      "description": "Chọn MAE CV thấp nhất; hòa dùng độ lệch chuẩn CV nhỏ hơn. Không chọn lại theo holdout."
+    },
+    {
+      "name": "Đánh giá",
+      "input": "models/final/, holdout cố định",
+      "output": "results/training_holdout_report.json",
+      "summary": "292 căn holdout; có cả chỉ số train",
+      "description": "Suy luận lại để kiểm chứng số liệu đã lưu; chưa phải kiểm nghiệm ngoài Ames."
+    },
+    {
+      "name": "Chạy ứng dụng",
+      "input": "service/predict_service.py, server.js",
+      "output": "Giao diện tại cổng 3000",
+      "summary": "5 mô hình dùng chung ở các trang",
+      "description": "Nhập dữ liệu, so sánh giá và chỉ số, tách nhóm train/holdout/chưa xác minh."
+    }
+  ]
+}

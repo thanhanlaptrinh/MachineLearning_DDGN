@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "passed": 4,
+  "failed": 0,
+  "checks": [
+    "Production supervisor serves health through PORT=3002",
+    "Supervisor forwards termination and exits",
+    "Local demo starts Express and Flask",
+    "Ctrl+C stops local demo cleanly"
+  ]
+}

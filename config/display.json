@@ -1,0 +1,28 @@
+{
+  "usd_to_vnd": 25000,
+  "rate_note": "Tỷ giá quy đổi cố định phục vụ đồ án, không phải tỷ giá trực tiếp. Có thể cấu hình USD_TO_VND khi chạy Flask.",
+  "source_currency": "USD",
+  "display_currency": "VND",
+  "excluded_features": [
+    "Id"
+  ],
+  "input_feature_count": 79,
+  "model_manifest": "models/final/manifest.json",
+  "fit_thresholds": {
+    "large": {
+      "label": "Khoảng cách lớn",
+      "mae_ratio": 2.0,
+      "r2_gap": 0.1
+    },
+    "moderate": {
+      "label": "Khoảng cách vừa",
+      "mae_ratio": 1.5,
+      "r2_gap": 0.06
+    },
+    "small": {
+      "label": "Khoảng cách nhỏ",
+      "mae_ratio": 1.25,
+      "r2_gap": 0.03
+    }
+  }
+}

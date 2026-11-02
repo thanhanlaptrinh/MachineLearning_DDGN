@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "passed": 17,
+  "failed": 0,
+  "engine": "Chromium 153.0.8010.0",
+  "checks": [
+    "Train/Test recomputes five saved models",
+    "linear lookup/inference/trace and model evidence",
+    "tree lookup/inference/trace and model evidence",
+    "forest lookup/inference/trace and model evidence",
+    "boosting lookup/inference/trace and model evidence",
+    "xgboost lookup/inference/trace and model evidence",
+    "m² to sqft conversion",
+    "30 holdout green banner",
+    "Chart controls independent",
+    "30 train red warning",
+    "Process manifest and download links",
+    "Favicon no 404",
+    "Mobile data",
+    "Mobile predict/boosting",
+    "Mobile compare",
+    "Mobile process",
+    "No console error or warning"
+  ],
+  "errors": []
+}

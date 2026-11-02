@@ -1,0 +1,333 @@
+{
+  "train_shape": [
+    1460,
+    81
+  ],
+  "test_shape": [
+    1459,
+    80
+  ],
+  "feature_count": 79,
+  "numeric_count": 36,
+  "categorical_count": 43,
+  "duplicate_rows": 0,
+  "missing_cells": 7829,
+  "missing_columns": 19,
+  "missing": [
+    {
+      "feature": "PoolQC",
+      "count": 1453,
+      "percent": 99.52054794520548
+    },
+    {
+      "feature": "MiscFeature",
+      "count": 1406,
+      "percent": 96.30136986301369
+    },
+    {
+      "feature": "Alley",
+      "count": 1369,
+      "percent": 93.76712328767123
+    },
+    {
+      "feature": "Fence",
+      "count": 1179,
+      "percent": 80.75342465753424
+    },
+    {
+      "feature": "MasVnrType",
+      "count": 872,
+      "percent": 59.726027397260275
+    },
+    {
+      "feature": "FireplaceQu",
+      "count": 690,
+      "percent": 47.26027397260274
+    },
+    {
+      "feature": "LotFrontage",
+      "count": 259,
+      "percent": 17.73972602739726
+    },
+    {
+      "feature": "GarageQual",
+      "count": 81,
+      "percent": 5.5479452054794525
+    },
+    {
+      "feature": "GarageFinish",
+      "count": 81,
+      "percent": 5.5479452054794525
+    },
+    {
+      "feature": "GarageType",
+      "count": 81,
+      "percent": 5.5479452054794525
+    },
+    {
+      "feature": "GarageYrBlt",
+      "count": 81,
+      "percent": 5.5479452054794525
+    },
+    {
+      "feature": "GarageCond",
+      "count": 81,
+      "percent": 5.5479452054794525
+    },
+    {
+      "feature": "BsmtFinType2",
+      "count": 38,
+      "percent": 2.6027397260273974
+    },
+    {
+      "feature": "BsmtExposure",
+      "count": 38,
+      "percent": 2.6027397260273974
+    },
+    {
+      "feature": "BsmtCond",
+      "count": 37,
+      "percent": 2.5342465753424657
+    },
+    {
+      "feature": "BsmtQual",
+      "count": 37,
+      "percent": 2.5342465753424657
+    },
+    {
+      "feature": "BsmtFinType1",
+      "count": 37,
+      "percent": 2.5342465753424657
+    },
+    {
+      "feature": "MasVnrArea",
+      "count": 8,
+      "percent": 0.547945205479452
+    },
+    {
+      "feature": "Electrical",
+      "count": 1,
+      "percent": 0.0684931506849315
+    }
+  ],
+  "price_stats_usd": {
+    "count": 1460.0,
+    "mean": 180921.19589041095,
+    "std": 79442.50288288662,
+    "min": 34900.0,
+    "25%": 129975.0,
+    "50%": 163000.0,
+    "75%": 214000.0,
+    "max": 755000.0,
+    "skew": 1.8828757597682129,
+    "kurtosis": 6.536281860064529
+  },
+  "price_stats_million_vnd": {
+    "count": 1460.0,
+    "mean": 4523.029897260274,
+    "std": 1986.0625720721655,
+    "min": 872.5,
+    "25%": 3249.375,
+    "50%": 4075.0,
+    "75%": 5350.0,
+    "max": 18875.0,
+    "skew": 1.8828757597682129,
+    "kurtosis": 6.536281860064529
+  },
+  "correlation": [
+    {
+      "feature": "OverallQual",
+      "pearson": 0.7909816005838053
+    },
+    {
+      "feature": "GrLivArea",
+      "pearson": 0.7086244776126515
+    },
+    {
+      "feature": "GarageCars",
+      "pearson": 0.6404091972583519
+    },
+    {
+      "feature": "GarageArea",
+      "pearson": 0.6234314389183622
+    },
+    {
+      "feature": "TotalBsmtSF",
+      "pearson": 0.6135805515591943
+    },
+    {
+      "feature": "1stFlrSF",
+      "pearson": 0.6058521846919153
+    },
+    {
+      "feature": "FullBath",
+      "pearson": 0.5606637627484453
+    },
+    {
+      "feature": "TotRmsAbvGrd",
+      "pearson": 0.5337231555820284
+    },
+    {
+      "feature": "YearBuilt",
+      "pearson": 0.5228973328794967
+    },
+    {
+      "feature": "YearRemodAdd",
+      "pearson": 0.5071009671113866
+    },
+    {
+      "feature": "GarageYrBlt",
+      "pearson": 0.4863616774878596
+    },
+    {
+      "feature": "MasVnrArea",
+      "pearson": 0.47749304709571444
+    },
+    {
+      "feature": "Fireplaces",
+      "pearson": 0.46692883675152763
+    },
+    {
+      "feature": "BsmtFinSF1",
+      "pearson": 0.3864198062421535
+    },
+    {
+      "feature": "LotFrontage",
+      "pearson": 0.35179909657067737
+    },
+    {
+      "feature": "WoodDeckSF",
+      "pearson": 0.32441344456812926
+    },
+    {
+      "feature": "2ndFlrSF",
+      "pearson": 0.31933380283206736
+    },
+    {
+      "feature": "OpenPorchSF",
+      "pearson": 0.31585622711605504
+    },
+    {
+      "feature": "HalfBath",
+      "pearson": 0.28410767559478256
+    },
+    {
+      "feature": "LotArea",
+      "pearson": 0.2638433538714051
+    },
+    {
+      "feature": "BsmtFullBath",
+      "pearson": 0.22712223313149427
+    },
+    {
+      "feature": "BsmtUnfSF",
+      "pearson": 0.21447910554696928
+    },
+    {
+      "feature": "BedroomAbvGr",
+      "pearson": 0.16821315430073963
+    },
+    {
+      "feature": "ScreenPorch",
+      "pearson": 0.11144657114291112
+    },
+    {
+      "feature": "PoolArea",
+      "pearson": 0.09240354949187318
+    },
+    {
+      "feature": "MoSold",
+      "pearson": 0.046432245223819446
+    },
+    {
+      "feature": "3SsnPorch",
+      "pearson": 0.04458366533574838
+    },
+    {
+      "feature": "BsmtFinSF2",
+      "pearson": -0.011378121450215146
+    },
+    {
+      "feature": "BsmtHalfBath",
+      "pearson": -0.01684415429735895
+    },
+    {
+      "feature": "MiscVal",
+      "pearson": -0.021189579640303213
+    },
+    {
+      "feature": "LowQualFinSF",
+      "pearson": -0.02560613000067955
+    },
+    {
+      "feature": "YrSold",
+      "pearson": -0.028922585168736813
+    },
+    {
+      "feature": "OverallCond",
+      "pearson": -0.07785589404867797
+    },
+    {
+      "feature": "MSSubClass",
+      "pearson": -0.08428413512659509
+    },
+    {
+      "feature": "EnclosedPorch",
+      "pearson": -0.1285779579259566
+    },
+    {
+      "feature": "KitchenAbvGr",
+      "pearson": -0.13590737084214105
+    }
+  ],
+  "outliers_grlivarea_gt4000_price_lt300000": [
+    524,
+    1299
+  ],
+  "quality_1_2": [
+    {
+      "Id": 376,
+      "quality": 1,
+      "price_usd": 61000.0
+    },
+    {
+      "Id": 534,
+      "quality": 1,
+      "price_usd": 39300.0
+    },
+    {
+      "Id": 637,
+      "quality": 2,
+      "price_usd": 60000.0
+    },
+    {
+      "Id": 917,
+      "quality": 2,
+      "price_usd": 35311.0
+    },
+    {
+      "Id": 1101,
+      "quality": 2,
+      "price_usd": 60000.0
+    }
+  ],
+  "highest_prices": [
+    {
+      "Id": 692,
+      "price_usd": 755000.0
+    },
+    {
+      "Id": 1183,
+      "price_usd": 745000.0
+    },
+    {
+      "Id": 1170,
+      "price_usd": 625000.0
+    }
+  ],
+  "removed_rows": 0,
+  "data_sha256": {
+    "data/train.csv": "ed142e0a97bd49fc3b46c930209c55750fc4e806f5430c7d7409cb4cf25149cb",
+    "data/test.csv": "3559f4ee4f04729814c85f9f597331e02bdb81b7c96c1aacf8515610b69915cd"
+  }
+}

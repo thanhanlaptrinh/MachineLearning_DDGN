@@ -1,0 +1,9 @@
+﻿name,input,output,summary,description
+Dữ liệu,"data/train.csv, data/test.csv",results/eda_report.json,"1460 dòng có nhãn, 1459 dòng không nhãn",Dữ liệu gốc được bảo toàn bằng SHA-256.
+Khảo sát,data/train.csv,"results/figures/, eda_report.json","79 đặc trưng; 36 số, 43 phân loại","Khảo sát giá, giá trị thiếu, tương quan và ngoại lệ; không loại dòng."
+Tiền xử lý,notebooks_or_src_py/preprocess.py,Pipeline trong models/final/,"79 cột đầu vào, không có Id",Điền trung vị cho số; nhãn Missing và mã hóa một nóng cho phân loại; fit trong mỗi fold.
+Chia dữ liệu,data/train.csv,results/tuning_selection.json,1168 train / 292 holdout; seed 42,Giữ nguyên cách chia 80/20 của nhóm.
+Huấn luyện và tinh chỉnh,"tune_models.py, tập train","results/tuning_report.json, tuning_cv_results/",5 mô hình; CV 5 phần,Cây quyết định tìm lưới; ba mô hình tổ hợp tìm ngẫu nhiên raw/log. Hồi quy tuyến tính là đối chứng.
+Chọn mô hình,results/tuning_selection.json,models/final/manifest.json,Mô hình thắng CV: boosting,Chọn MAE CV thấp nhất; hòa dùng độ lệch chuẩn CV nhỏ hơn. Không chọn lại theo holdout.
+Đánh giá,"models/final/, holdout cố định",results/training_holdout_report.json,292 căn holdout; có cả chỉ số train,Suy luận lại để kiểm chứng số liệu đã lưu; chưa phải kiểm nghiệm ngoài Ames.
+Chạy ứng dụng,"service/predict_service.py, server.js",Giao diện tại cổng 3000,5 mô hình dùng chung ở các trang,"Nhập dữ liệu, so sánh giá và chỉ số, tách nhóm train/holdout/chưa xác minh."

@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "pages": 31,
+  "headings": 62,
+  "native_toc_fields": 3,
+  "correct_cached_page_references": 92,
+  "font": "Times New Roman",
+  "figure_placeholders": 14,
+  "visual_review": "All pages inspected; updated pages rechecked; unchanged body pages compared pixel-exact."
+}

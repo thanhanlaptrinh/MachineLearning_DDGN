@@ -1,0 +1,339 @@
+{
+  "status": "PASS",
+  "passed": 83,
+  "failed": 0,
+  "checks": [
+    {
+      "check": "Overfit 2.6 0.0768",
+      "passed": true
+    },
+    {
+      "check": "Overfit 1.77 0.0641",
+      "passed": true
+    },
+    {
+      "check": "Overfit 2.72 0.0908",
+      "passed": true
+    },
+    {
+      "check": "Overfit 2.42 0.179",
+      "passed": true
+    },
+    {
+      "check": "Overfit 1.33 0.0336",
+      "passed": true
+    },
+    {
+      "check": "Overfit 1.1 0.01",
+      "passed": true
+    },
+    {
+      "check": "Overfit 1.2 0.1",
+      "passed": true
+    },
+    {
+      "check": "Overfit 1.2 0.06",
+      "passed": true
+    },
+    {
+      "check": "Overfit 1.2 0.03",
+      "passed": true
+    },
+    {
+      "check": "train_only scope and banner",
+      "passed": true
+    },
+    {
+      "check": "train_only linear membership counts",
+      "passed": true
+    },
+    {
+      "check": "train_only linear headline count",
+      "passed": true
+    },
+    {
+      "check": "train_only tree membership counts",
+      "passed": true
+    },
+    {
+      "check": "train_only tree headline count",
+      "passed": true
+    },
+    {
+      "check": "train_only forest membership counts",
+      "passed": true
+    },
+    {
+      "check": "train_only forest headline count",
+      "passed": true
+    },
+    {
+      "check": "train_only boosting membership counts",
+      "passed": true
+    },
+    {
+      "check": "train_only boosting headline count",
+      "passed": true
+    },
+    {
+      "check": "train_only xgboost membership counts",
+      "passed": true
+    },
+    {
+      "check": "train_only xgboost headline count",
+      "passed": true
+    },
+    {
+      "check": "holdout_only scope and banner",
+      "passed": true
+    },
+    {
+      "check": "holdout_only linear membership counts",
+      "passed": true
+    },
+    {
+      "check": "holdout_only linear headline count",
+      "passed": true
+    },
+    {
+      "check": "holdout_only tree membership counts",
+      "passed": true
+    },
+    {
+      "check": "holdout_only tree headline count",
+      "passed": true
+    },
+    {
+      "check": "holdout_only forest membership counts",
+      "passed": true
+    },
+    {
+      "check": "holdout_only forest headline count",
+      "passed": true
+    },
+    {
+      "check": "holdout_only boosting membership counts",
+      "passed": true
+    },
+    {
+      "check": "holdout_only boosting headline count",
+      "passed": true
+    },
+    {
+      "check": "holdout_only xgboost membership counts",
+      "passed": true
+    },
+    {
+      "check": "holdout_only xgboost headline count",
+      "passed": true
+    },
+    {
+      "check": "mixed scope and banner",
+      "passed": true
+    },
+    {
+      "check": "mixed linear membership counts",
+      "passed": true
+    },
+    {
+      "check": "mixed linear headline count",
+      "passed": true
+    },
+    {
+      "check": "mixed tree membership counts",
+      "passed": true
+    },
+    {
+      "check": "mixed tree headline count",
+      "passed": true
+    },
+    {
+      "check": "mixed forest membership counts",
+      "passed": true
+    },
+    {
+      "check": "mixed forest headline count",
+      "passed": true
+    },
+    {
+      "check": "mixed boosting membership counts",
+      "passed": true
+    },
+    {
+      "check": "mixed boosting headline count",
+      "passed": true
+    },
+    {
+      "check": "mixed xgboost membership counts",
+      "passed": true
+    },
+    {
+      "check": "mixed xgboost headline count",
+      "passed": true
+    },
+    {
+      "check": "XGB lower error on training sample",
+      "passed": true
+    },
+    {
+      "check": "linear single sample has no R2",
+      "passed": true
+    },
+    {
+      "check": "linear trace verified",
+      "passed": true
+    },
+    {
+      "check": "tree single sample has no R2",
+      "passed": true
+    },
+    {
+      "check": "tree trace verified",
+      "passed": true
+    },
+    {
+      "check": "forest single sample has no R2",
+      "passed": true
+    },
+    {
+      "check": "forest trace verified",
+      "passed": true
+    },
+    {
+      "check": "boosting single sample has no R2",
+      "passed": true
+    },
+    {
+      "check": "boosting trace verified",
+      "passed": true
+    },
+    {
+      "check": "xgboost single sample has no R2",
+      "passed": true
+    },
+    {
+      "check": "xgboost trace verified",
+      "passed": true
+    },
+    {
+      "check": "Unknown labels are unverified",
+      "passed": true
+    },
+    {
+      "check": "linear actual top15",
+      "passed": true
+    },
+    {
+      "check": "linear feature display removes prefix",
+      "passed": true
+    },
+    {
+      "check": "linear tuning and saved variant agree",
+      "passed": true
+    },
+    {
+      "check": "tree actual top15",
+      "passed": true
+    },
+    {
+      "check": "tree feature display removes prefix",
+      "passed": true
+    },
+    {
+      "check": "tree tuning and saved variant agree",
+      "passed": true
+    },
+    {
+      "check": "forest actual top15",
+      "passed": true
+    },
+    {
+      "check": "forest feature display removes prefix",
+      "passed": true
+    },
+    {
+      "check": "forest tuning and saved variant agree",
+      "passed": true
+    },
+    {
+      "check": "boosting actual top15",
+      "passed": true
+    },
+    {
+      "check": "boosting feature display removes prefix",
+      "passed": true
+    },
+    {
+      "check": "boosting tuning and saved variant agree",
+      "passed": true
+    },
+    {
+      "check": "xgboost actual top15",
+      "passed": true
+    },
+    {
+      "check": "xgboost feature display removes prefix",
+      "passed": true
+    },
+    {
+      "check": "xgboost tuning and saved variant agree",
+      "passed": true
+    },
+    {
+      "check": "Chapter3 raw stats from train.csv",
+      "passed": true
+    },
+    {
+      "check": "Chapter3 all 1460 rows kept",
+      "passed": true
+    },
+    {
+      "check": "79 inputs (36 numeric,43 categorical), no Id",
+      "passed": true
+    },
+    {
+      "check": "linear train CSV matches model",
+      "passed": true
+    },
+    {
+      "check": "tree train CSV matches model",
+      "passed": true
+    },
+    {
+      "check": "forest train CSV matches model",
+      "passed": true
+    },
+    {
+      "check": "boosting train CSV matches model",
+      "passed": true
+    },
+    {
+      "check": "xgboost train CSV matches model",
+      "passed": true
+    },
+    {
+      "check": "linear test CSV matches model",
+      "passed": true
+    },
+    {
+      "check": "tree test CSV matches model",
+      "passed": true
+    },
+    {
+      "check": "forest test CSV matches model",
+      "passed": true
+    },
+    {
+      "check": "boosting test CSV matches model",
+      "passed": true
+    },
+    {
+      "check": "xgboost test CSV matches model",
+      "passed": true
+    },
+    {
+      "check": "No protected artifacts mutated",
+      "passed": true
+    }
+  ]
+}

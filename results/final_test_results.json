@@ -1,0 +1,114 @@
+{
+  "status": "PASS",
+  "results": [
+    {
+      "command": [
+        "python",
+        "scripts/prepare_vnd_audit.py"
+      ],
+      "exit_code": 0,
+      "stdout": "Linear Regression final holdout MAE USD 20420.49982101374\nDecision Tree final holdout MAE USD 25895.71194391829\nRandom Forest final holdout MAE USD 16880.35071114779\nGradient Boosting final holdout MAE USD 15814.429493030604\nXGBoost final holdout MAE USD 16178.732555650686\nAUDIT EXPORTED: no fit, 79 features; final selection hash verified\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "scripts/export_vnd.py"
+      ],
+      "exit_code": 0,
+      "stdout": "Đã xuất proof_vnd.json, doi_chieu_30_can_VND.csv và model_results_VND.csv\nExported final feature importance, holdout plot and training report; no model fitted.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "scripts/prepare_final_report.py"
+      ],
+      "exit_code": 0,
+      "stdout": "Generated EDA, current TRAIN/TEST, CV tables, process manifest and figures from actual code.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "scripts/verify_vnd.py"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS 55 checks\nLinear Regression Khoảng cách nhỏ\nDecision Tree Khoảng cách lớn\nRandom Forest Khoảng cách lớn\nGradient Boosting Khoảng cách lớn\nXGBoost Khoảng cách vừa\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "scripts/verify_dynamic.py"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS 85 dynamic numerical checks\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "scripts/verify_training_report.py"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS 53 training report checks\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "scripts/verify_round1.py"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS 94 round1 checks\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "scripts/verify_portable_xgboost.py"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS 33 portable checks; max prediction difference = 0 USD; Booster pickle blocked; no retraining.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "scripts/verify_completion.py"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS 83 completion checks\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "node",
+        "scripts/smoke_http.mjs"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS HTTP: five real pipelines, prices/metrics, decomposition, CSV 150 rows and invalid model.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "node",
+        "scripts/smoke_dynamic_http.mjs"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS dynamic HTTP: arbitrary inputs, actual lookup beyond 30, complete 1459-row Kaggle test × 5, missing-label guards and true model explanations.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "node",
+        "scripts/browser_check.mjs"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS 17 real-browser checks\n",
+      "stderr": ""
+    }
+  ],
+  "scope": "CV searches are preserved historical runs; current checks reproduce saved inference, split, source labels, metrics, Id invariance and browser behavior."
+}
